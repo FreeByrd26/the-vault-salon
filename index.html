@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="assets/logo-square.png">
+<script src="js/lux.js" defer></script>
 </head>
 <body>
 <div class="announce">By appointment only &mdash; <a href="https://thevaultnc.glossgenius.com" target="_blank" rel="noopener">online booking is live</a></div>
@@ -32,6 +33,7 @@
 <div class="hero">
   <div class="hero-grid">
     <div class="hero-copy">
+      <span class="watermark" aria-hidden="true">V</span>
       <p class="eyebrow">New Canaan, Connecticut</p>
       <h1>Great hair,<br><em style="font-style:italic;color:var(--gold);">kept safe.</em></h1>
       <p class="lede">The Vault is your safe space to relax and unwind from the demands of your day. Every artist here is highly trained, certified in luxury services, and hand selected by Nicole Strachan herself.</p>
@@ -47,7 +49,13 @@
     </div>
     <div class="hero-visual">
       <div class="photo" role="img" aria-label="Inside The Vault salon"></div>
-      <div class="badge"><span>The Vault<em>est. New Canaan</em>luxury salon</span></div>
+      <div class="badge spin" aria-hidden="true">
+        <svg viewBox="0 0 160 160">
+          <defs><path id="ring" d="M 80,80 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0"/></defs>
+          <text><textPath href="#ring">THE VAULT &#9670; NEW CANAAN &#9670; CT &#9670;</textPath></text>
+        </svg>
+        <span class="badge-v">V</span>
+      </div>
     </div>
   </div>
 </div>
@@ -61,17 +69,17 @@
     <p class="lede">One chair, one artist, one client at a time &mdash; no double-booking, no rush.</p>
     <div class="steps">
       <div class="step">
-        <span class="num">01.</span>
+        <span class="num">I.</span>
         <h3>The Consultation</h3>
         <p>Every service begins with a real conversation &mdash; your hair history, your routine, your goal hair. Extension and color-correction consultations are always complimentary.</p>
       </div>
       <div class="step">
-        <span class="num">02.</span>
+        <span class="num">II.</span>
         <h3>The Service</h3>
         <p>Master colorists and IBE&reg;-certified extension artists working with Kerastase, Olaplex, and Redken &mdash; matched to your stylist level so pricing is always transparent.</p>
       </div>
       <div class="step">
-        <span class="num">03.</span>
+        <span class="num">III.</span>
         <h3>The Reveal</h3>
         <p>Leave with a finished look, a rebooking that protects your result, and 20% off stylist-recommended home care at your first extension appointment.</p>
       </div>
@@ -85,6 +93,7 @@
       <p class="eyebrow centered">Service Menu</p>
       <h2 class="display">Reserve your <em>experience.</em></h2>
       <p class="lede">Prices are starting points and vary by stylist level &mdash; exact pricing appears when you book online. By appointment only.</p>
+      <div class="ornament" aria-hidden="true">&#9670;</div>
     </div>
       <div class="menu-cat">
         <h3>Haircuts <span class="cat-note">cut & finish</span></h3>
@@ -323,6 +332,11 @@
     </div>
   </div>
 </section>
+
+<div class="quote-band">
+  <p class="quote">&ldquo;Luxury, <em>without the attitude.</em>&rdquo;</p>
+  <p class="quote-attr">&mdash; The Vault house philosophy</p>
+</div>
 
 <section class="dark">
   <div class="wrap spot">

@@ -512,3 +512,169 @@ footer.site p { font-size: 0.92rem; }
 .policy p, .policy li { color: var(--muted); margin-bottom: 14px; }
 .policy ul { padding-left: 20px; }
 .policy strong { color: var(--ink); font-weight: 500; }
+
+/* ==================== LUXURY LAYER ==================== */
+
+/* metallic gold buttons with shine sweep */
+.btn.gold {
+  background: linear-gradient(135deg, #9a790e 0%, #b18b11 38%, #d8b44a 52%, #b18b11 66%, #9a790e 100%);
+  border-color: rgba(154, 121, 14, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+.btn.gold::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -80%;
+  width: 50%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn.gold:hover { background: linear-gradient(135deg, #8a6c0c, #c9a437 55%, #8a6c0c); }
+.btn.gold:hover::after { left: 130%; }
+
+/* gold hairline under announce bar */
+.announce { border-bottom: 1px solid rgba(211, 174, 69, 0.55); }
+
+/* wordmark diamond */
+.wordmark .mark::after {
+  content: "\25C6";
+  color: var(--gold);
+  font-size: 0.5em;
+  vertical-align: 0.35em;
+  margin-left: 10px;
+}
+
+/* hero watermark V */
+.hero-copy { position: relative; }
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-54%);
+  font-family: var(--display);
+  font-size: 34rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(177, 139, 17, 0.16);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.hero-copy > *:not(.watermark) { position: relative; z-index: 1; }
+@media (max-width: 940px) { .watermark { font-size: 20rem; left: -10px; } }
+
+/* rotating badge */
+.hero-visual .badge.spin {
+  background: radial-gradient(circle at 35% 30%, #262117, #12100c 70%);
+  overflow: visible;
+}
+.badge.spin svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: badgespin 26s linear infinite;
+}
+.badge.spin svg text {
+  fill: var(--gold-bright);
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+}
+.badge.spin .badge-v {
+  font-family: var(--display);
+  font-size: 3.4rem;
+  color: var(--paper);
+  line-height: 1;
+}
+@keyframes badgespin { to { transform: rotate(360deg); } }
+
+/* ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-top: 34px;
+}
+.ornament::before, .ornament::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.ornament::after { background: linear-gradient(90deg, var(--gold), transparent); }
+
+/* menu refinements */
+.menu-cat h3 .cat-note { font-style: normal; }
+.mi .desc { font-family: var(--display); font-style: italic; font-size: 1rem; color: #857b66; }
+.mi:hover .name { color: var(--gold); transition: color 0.25s ease; }
+
+/* steps: hairline gold top + roman numerals */
+.step { border-top: 1px solid var(--line-gold); }
+.step .num { font-size: 1.9rem; }
+
+/* pull-quote band */
+.quote-band {
+  background: var(--paper);
+  text-align: center;
+  padding: 110px 28px;
+  border-top: 1px solid var(--line-gold);
+}
+.quote-band .quote {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto 18px;
+}
+.quote-band .quote em { font-style: italic; color: var(--gold); }
+.quote-band .quote-attr {
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* dark section: croc texture depth */
+section.dark {
+  position: relative;
+  overflow: hidden;
+}
+section.dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/cover-croc.jpg") center/cover no-repeat;
+  opacity: 0.14;
+}
+section.dark > .wrap { position: relative; }
+
+/* team photo gold hairline */
+.tcard .photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(177, 139, 17, 0.35);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* scroll reveal */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .reveal:nth-child(3) { transition-delay: 0.16s; }
+  .reveal:nth-child(4) { transition-delay: 0.24s; }
+}
