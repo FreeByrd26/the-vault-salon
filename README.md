@@ -1,6 +1,6 @@
 # The Vault by Nicole Strachan — Static Site
 
-Static replica of [thevaultnewcanaan.com](https://www.thevaultnewcanaan.com) (Simvoly) combined with the live
+Original site for The Vault by Nicole Strachan, informed by [thevaultnewcanaan.com](https://www.thevaultnewcanaan.com) (Simvoly) combined with the live
 [GlossGenius booking site](https://thevaultnc.glossgenius.com), built for GitHub Pages.
 
 All booking CTAs point to GlossGenius: **https://thevaultnc.glossgenius.com**
@@ -9,9 +9,7 @@ All booking CTAs point to GlossGenius: **https://thevaultnc.glossgenius.com**
 
 | File | Content | Source |
 |---|---|---|
-| `index.html` | Hero, brand copy, featured services, IBE section, hours & contact | Simvoly copy + GlossGenius hours/CTA |
-| `services.html` | Full menu — 49 services in 7 categories with live pricing | GlossGenius service data (July 2026) |
-| `team.html` | Stylist bios (Nicole, Lisa, Olivia) + full team | Simvoly bios + GlossGenius roster |
+| `index.html` | One-page site: split hero, experience steps, full 49-service price menu, IBE spotlight, artists, hours & contact | Original design; copy/pricing from Simvoly + GlossGenius |
 | `policies.html` | Appointment cancellation & no-show policy | GlossGenius About page |
 
 No build step — plain HTML/CSS (`css/style.css`), self-hosted images in `assets/`.
