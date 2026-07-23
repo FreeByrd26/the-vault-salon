@@ -1,0 +1,17 @@
+# The Vault by Nicole Strachan
+
+> Luxury hair salon in New Canaan, Connecticut. Master color, Invisible Bead
+> Extensions (IBE), Great Lengths & K-Tip extensions, keratin treatments, and
+> luxury styling by hand-selected, certified artists. By appointment only.
+
+- Address: 12 Burtis Avenue, New Canaan, CT 06840 (Fairfield County)
+- Phone: (203) 228-5027
+- Email: angie@thevaultnewcanaan.com
+- Book online: https://thevaultnc.glossgenius.com/booking-flow
+- Hours: Tue/Wed/Fri 9am-5pm, Thu 10am-8pm, Sat 8am-1pm; closed Sun & Mon
+- Owner: Nicole Strachan — master colorist, IBE Elite Artist, former IBE National Platform Artist
+- Artists: Lisa Becker (stylist & colorist), Olivia Martin (colorist & extension artist), Jenny Zavala (blowdries)
+- Instagram: https://www.instagram.com/the_vault_new_canaan
+- Starting prices: women's haircut $90+, glaze $65, balayage $415+, bleach & tone $245+, IBE 1 new row $375+, keratin $350+
+- Full menu & pricing: https://freebyrd26.github.io/the-vault-salon/#services
+- Cancellation policy: https://freebyrd26.github.io/the-vault-salon/policies.html

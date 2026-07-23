@@ -678,3 +678,71 @@ section.dark > .wrap { position: relative; }
   .reveal:nth-child(3) { transition-delay: 0.16s; }
   .reveal:nth-child(4) { transition-delay: 0.24s; }
 }
+
+/* ==================== FULL PHOTOS + MOBILE POLISH ==================== */
+
+/* IBE spotlight: square box = square photo, nothing cropped */
+.spot .photo {
+  aspect-ratio: 1;
+  min-height: 0;
+  height: auto;
+  align-self: center;
+  width: 100%;
+}
+
+/* team photos are 1:1 sources in 1:1 frames (uncropped); just cap size */
+.tcard .photo { width: min(320px, 100%); }
+
+@media (max-width: 940px) {
+  /* hero photo: show (nearly) the whole interior shot on mobile */
+  .hero-visual .photo { min-height: 0; aspect-ratio: 16/10; }
+  .watermark { display: none; }
+}
+
+@media (max-width: 700px) {
+  section { padding: 68px 0; }
+  .quote-band { padding: 72px 24px; }
+  .close-cta { padding: 88px 24px; }
+
+  .hero-copy { padding: 48px 24px 28px; }
+  .hero-copy h1 { font-size: clamp(2.9rem, 13vw, 4rem); }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { text-align: center; }
+  .hero-note { flex-wrap: wrap; gap: 16px 28px; margin-top: 40px; }
+  .hero-visual { padding: 0 24px 64px; }
+  .hero-visual .badge { width: 108px; height: 108px; bottom: -26px; }
+  .badge.spin .badge-v { font-size: 2.6rem; }
+
+  .ticker .track { font-size: 0.78rem; letter-spacing: 0.26em; }
+
+  h2.display, h1.display { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .menu-cat h3 { font-size: 1.55rem; flex-wrap: wrap; }
+  .menu-cat h3 .cat-note { width: 100%; order: 3; }
+  .menu-cat h3::after { display: none; }
+  .mi .desc { max-width: 100%; }
+
+  .steps { gap: 34px; margin-top: 44px; }
+  .visit-grid { gap: 36px; }
+  .addr { font-size: 1.55rem; }
+  table.hours td { letter-spacing: 0.12em; font-size: 0.78rem; }
+
+  .team-row { gap: 44px; }
+  .team-more { font-size: 0.88rem; line-height: 2; }
+
+  .foot-grid { text-align: left; gap: 34px; }
+  .head-inner { padding: 14px 20px; }
+  .announce { font-size: 0.62rem; letter-spacing: 0.2em; }
+}
+
+/* larger tap targets on touch */
+@media (pointer: coarse) {
+  nav.main a.navlink { padding: 10px 0; }
+  .mi { padding: 16px 0; }
+}
+
+/* mobile wordmark: one clean line */
+@media (max-width: 700px) {
+  .wordmark { gap: 0; }
+  .wordmark .mark { font-size: 1.15rem; letter-spacing: 0.14em; white-space: nowrap; }
+  .wordmark .by { display: none; }
+}
