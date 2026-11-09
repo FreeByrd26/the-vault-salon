@@ -1,0 +1,121 @@
+/* Client forms pages — extends css/style.css (The Vault brand tokens) */
+
+.forms-list { max-width: 860px; margin: 0 auto; display: grid; gap: 22px; }
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  padding: 34px 36px 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+.form-card h3 { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1.15; margin: 8px 0 8px; }
+.form-card p { color: var(--muted); margin: 0; }
+.form-card .tag { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); }
+.form-card .actions { display: flex; flex-direction: column; gap: 10px; min-width: 230px; }
+.form-card .actions .btn { text-align: center; padding: 15px 22px 13px; }
+@media (max-width: 760px) {
+  .form-card { grid-template-columns: 1fr; padding: 28px 22px; }
+  .form-card .actions { min-width: 0; }
+}
+.forms-note { max-width: 860px; margin: 34px auto 0; color: var(--muted); font-size: 0.95rem; text-align: center; }
+
+/* agreement page */
+.agreement { max-width: 860px; margin: 0 auto; }
+.agreement .policy { max-width: none; }
+.agreement h2 { scroll-margin-top: 100px; }
+.agreement .intro-box {
+  background: var(--paper-2);
+  border-left: 2px solid var(--gold);
+  padding: 20px 24px;
+  color: var(--ink);
+  margin-top: 36px;
+}
+.agreement .intro-box a { text-decoration: underline; }
+
+.fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px; margin: 18px 0 8px; }
+.fgrid .full { grid-column: 1 / -1; }
+@media (max-width: 700px) { .fgrid { grid-template-columns: 1fr; } }
+
+.field label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.field input, .field select, .initial input {
+  width: 100%;
+  font-family: var(--ui);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(18, 16, 12, 0.22);
+  border-radius: 0;
+  padding: 12px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field input:focus, .field select:focus, .initial input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(177, 139, 17, 0.18);
+}
+.field input.sig { font-family: var(--display); font-style: italic; font-size: 1.45rem; padding: 8px 14px; }
+.field .hint { font-size: 0.8rem; color: var(--muted); margin-top: 5px; }
+
+.ptable { width: 100%; border-collapse: collapse; margin: 16px 0 22px; font-size: 0.95rem; background: #fff; }
+.ptable th {
+  text-align: left; font-weight: 500; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); background: var(--paper-2); padding: 11px 14px; border: 1px solid var(--line);
+}
+.ptable td { padding: 11px 14px; border: 1px solid var(--line); color: var(--ink); vertical-align: top; }
+.ptable td.num, .ptable th.num { text-align: right; white-space: nowrap; }
+.ptable tr.total td { background: var(--paper-2); font-weight: 500; }
+.ptable input { width: 7.5em; font-family: var(--ui); font-size: 0.95rem; padding: 6px 8px; border: 1px solid rgba(18,16,12,.22); background: #fff; text-align: right; }
+.ptable input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(177,139,17,.18); }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.initial {
+  display: grid; grid-template-columns: 92px 1fr; gap: 16px; align-items: start;
+  background: var(--paper-2); padding: 14px 16px; margin: 14px 0 6px;
+}
+.initial input { text-align: center; text-transform: uppercase; letter-spacing: 0.12em; padding: 9px 6px; }
+.initial span { color: var(--ink); padding-top: 9px; }
+.initial.ack { background: transparent; border-bottom: 1px solid var(--line); margin: 0; padding: 12px 0; }
+.initial input.invalid, .field input.invalid { border-color: #a3341f; box-shadow: 0 0 0 3px rgba(163, 52, 31, 0.15); }
+
+.submit-bar {
+  margin-top: 40px; padding: 30px 32px; background: var(--ink); color: var(--paper);
+  display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center;
+}
+.submit-bar p { margin: 0; color: rgba(246, 242, 234, 0.75); }
+.submit-bar strong { color: var(--paper); font-weight: 500; }
+@media (max-width: 760px) { .submit-bar { grid-template-columns: 1fr; } }
+.form-status { margin-top: 14px; min-height: 1.4em; color: var(--ink); font-size: 0.95rem; }
+.form-status.err { color: #a3341f; }
+.salon-only { margin-top: 26px; font-size: 0.88rem; color: var(--muted); }
+
+@media (max-width: 560px) {
+  .ptable { font-size: 0.84rem; }
+  .ptable th { font-size: 0.6rem; letter-spacing: 0.12em; padding: 9px 8px; }
+  .ptable td { padding: 9px 8px; }
+  .ptable input { width: 4.2em; padding: 5px 6px; display: block; margin-bottom: 4px; }
+  .initial { grid-template-columns: 64px 1fr; gap: 12px; padding: 12px; }
+  .submit-bar { padding: 24px 20px; }
+  .submit-bar .btn { width: 100%; text-align: center; }
+}
+
+/* header: room for the added "Forms" link */
+nav.main a.navlink, nav.main .btn, .wordmark, .wordmark * { white-space: nowrap; }
+@media (min-width: 941px) and (max-width: 1240px) {
+  nav.main { gap: 18px; }
+  nav.main a.navlink { letter-spacing: 0.16em; font-size: 0.66rem; }
+  nav.main .btn { padding: 11px 18px 9px; }
+}
+@media (min-width: 941px) and (max-width: 1080px) {
+  .wordmark .by { display: none; }
+}
